@@ -16,7 +16,9 @@ const Search = () => {
         </Col>
       </Row>
       <Row justify="center" style={{ marginTop: 50 }}>
-        <Col span={12}>검색</Col>
+        <Col span={12}>
+          <SearchInput />
+        </Col>
       </Row>
     </>
   );
