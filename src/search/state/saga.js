@@ -1,6 +1,6 @@
 import { all, put, call, takeEvery } from "redux-saga/effects";
 import { actions, Types } from "./index";
-import { callApi } from "../../common/util/api";
+import { callApi } from "../../util/api";
 
 function* FetchAutoComplete({ keyword }) {
   const { isSuccess, data } = yield call(callApi, {

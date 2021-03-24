@@ -5,7 +5,7 @@ import { SettingFilled } from "@ant-design/icons";
 /**
  *
  * @param {ojbect} param
- * @returns {() => void} param.logout
+ * @param {() => void} param.logout
  */
 const Settings = ({ logout }) => {
   return (

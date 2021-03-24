@@ -1,8 +1,9 @@
 import React from "react";
 import { Row, Col, Typography } from "antd";
 import Settings from "../component/Settings";
+import SearchInput from "./SearchInput";
 
-const Search = () => {
+const Search = (state) => {
   return (
     <>
       <Row justify="end" style={{ padding: 20 }}>

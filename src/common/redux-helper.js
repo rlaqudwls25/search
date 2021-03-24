@@ -24,3 +24,5 @@ export function createSetValueAction(type) {
 export function setValueReducer(state, action) {
   state[action.key] = action.value;
 }
+
+export const NOT_IMMUTABLE = Symbol("NOT_IMMUTABLE");

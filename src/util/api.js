@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API_HOST } from "../constant";
+import { API_HOST } from "../common/constant";
 import { message } from "antd";
 
 /**
@@ -11,6 +11,7 @@ import { message } from "antd";
  * @param {object=} param.data
  * @param {object=} param.totalCount
  */
+
 export function callApi({ method = "get", url, params, data }) {
   return axios({
     url,
