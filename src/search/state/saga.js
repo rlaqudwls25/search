@@ -4,12 +4,12 @@ import { callApi } from "../../util/api";
 
 function* FetchAutoComplete({ keyword }) {
   const { isSuccess, data } = yield call(callApi, {
-    url: "./user/search",
+    url: "/user/search",
     params: { keyword },
   });
 
   if (isSuccess && data) {
-    yield put(actions.setValue("auto"));
+    yield put(actions.setValue("autoCompletes", data));
   }
 }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { AutoComplete, Input } from "antd";
+import { AutoComplete, Input, Typography, Space } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import { useSelector, useDispatch } from "react-redux";
 import { actions } from "../state";
@@ -14,7 +14,7 @@ const Search = () => {
     }
   };
 
-  // const AutoComplete = useSelector((state) => state.search.autoComplete);
+  const autoCompletes = useSelector((state) => state.search.autoCompletes);
   const gotoUser = (value) => {};
   return (
     <AutoComplete
@@ -24,7 +24,18 @@ const Search = () => {
       style={{
         width: "100%",
       }}
-      options={[]}
+      options={autoCompletes.map((item) => ({
+        value: item.name,
+        lable: (
+          <Space>
+            <Typography.Text strong>{item.name}</Typography.Text>
+            <Typography.Text type="secondary">
+              {item.department}
+            </Typography.Text>
+            <Typography.Text>{item.tag}</Typography.Text>
+          </Space>
+        ),
+      }))}
       autoFocus
     >
       <Input

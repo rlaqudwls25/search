@@ -19,7 +19,7 @@ export const actions = {
 
 const INITIAL_STATE = {
   keyword: "",
-  autoComplete: [],
+  autoCompletes: [],
 };
 
 const reducer = createReducer(INITIAL_STATE, {
