@@ -11,7 +11,7 @@ export const Types = {
 
 export const actions = {
   setValue: createSetValueAction(Types.SetValue),
-  FetchAutoComplete: (keyword) => ({
+  fetchAutoComplete: (keyword) => ({
     type: Types.FetchAutoComplete,
     keyword,
   }),

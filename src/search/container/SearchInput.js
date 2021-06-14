@@ -15,12 +15,12 @@ const Search = () => {
   };
 
   const autoCompletes = useSelector((state) => state.search.autoCompletes);
-  const gotoUser = (value) => {};
+  const goToUser = (value) => {};
   return (
     <AutoComplete
       value={keyword}
       onChange={setKeyword}
-      onSelect={gotoUser}
+      onSelect={goToUser}
       style={{
         width: "100%",
       }}
